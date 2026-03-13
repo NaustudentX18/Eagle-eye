@@ -18,30 +18,33 @@ OmniRecon is a cutting-edge, mobile-optimized geospatial command center designed
 - **Mobile Optimization:** Responsive PWA interface with minimal GPU and memory footprints.
 
 ## Getting Started
-To begin using OmniRecon, follow these instructions:
 
-### Prerequisites
-- Node.js (v16+ recommended)
-- Modern browser supporting WebGL/WebGPU for 3D rendering
-- API keys for required data sources
+> **Full documentation:** See [ONBOARDING.md](ONBOARDING.md) for an in-depth guide covering installation, configuration, all commands, deployment, CI/CD, troubleshooting, and more.
 
-### Installation
+### Quick Start
+
+**Prerequisites:** Node.js v18+, a modern browser with WebGL/WebGPU support, and API keys for required data sources.
+
 1. Clone this repository:
    ```bash
    git clone https://github.com/NaustudentX18/Eagle-eye.git
-   ```
-2. Navigate to the project directory:
-   ```bash
    cd Eagle-eye
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
+3. Copy the environment template and add your API keys:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your keys — see ONBOARDING.md Section 5 for details
+   ```
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
+
+Open **http://localhost:5173** in your browser.
 
 ## Roadmap
 - [ ] Implement 3D globe rendering
