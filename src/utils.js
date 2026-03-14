@@ -10,8 +10,12 @@
  */
 export function formatCoordinate(value, type) {
   const abs = Math.abs(value);
-  const dir =
-    type === 'lat' ? (value >= 0 ? 'N' : 'S') : value >= 0 ? 'E' : 'W';
+  let dir;
+  if (type === 'lat') {
+    dir = value >= 0 ? 'N' : 'S';
+  } else {
+    dir = value >= 0 ? 'E' : 'W';
+  }
   return `${abs.toFixed(4)}° ${dir}`;
 }
 
