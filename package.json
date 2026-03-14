@@ -1,0 +1,35 @@
+{
+  "name": "omnirecon",
+  "version": "0.1.0",
+  "description": "Geospatial intelligence command center — OmniRecon",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "vite",
+    "dev:backend": "nodemon src/backend/server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node src/backend/server.js",
+    "lint": "eslint src tests",
+    "lint:fix": "eslint src tests --fix",
+    "test": "vitest run --config vitest.config.js",
+    "test:unit": "vitest run tests/unit --config vitest.config.js",
+    "test:watch": "vitest --config vitest.config.js",
+    "test:coverage": "vitest run --coverage --config vitest.config.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "vitest": {
+    "include": ["tests/**/*.test.js"]
+  }
+}
